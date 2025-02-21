@@ -15,7 +15,8 @@ router.post('/add',async(req,rea)=>{
     try {
         const todo=await Todo.create({title,priority});
     } catch (error) {
-        res.send('error')
+        console.log(error);
+       
     }
 })
 router.get('/get',async(req,res)=>{
