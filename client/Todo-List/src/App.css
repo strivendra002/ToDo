@@ -5,6 +5,110 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: linear-gradient(to right, #bda6a6, #aa829d);
 }
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #bda6a6, #aa829d);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Todo Container */
+.todo-container {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Title */
+.todo-title {
+  color: rgb(129, 29, 29);
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(45, 25, 25, 0.5);
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+
+/* Todo Card */
+
+.card {
+  background: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 250px; /* Prevents extra-long items */
+  word-wrap: break-word;
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Todo Text */
+.todo-text {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Button Container */
+.todo-actions {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap; /* Allows buttons to wrap instead of overflowing */
+}
+
+
+/* Delete Button */
+.delete-btn {
+  background: linear-gradient(to right, #ff6b6b, #d32f2f);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(to right, #d32f2f, #ff6b6b);
+  transform: scale(1.05);
+}
+
+/* Edit Button */
+.edit-btn {
+  background: linear-gradient(to right, #4CAF50, #388E3C);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-btn:hover {
+  background: linear-gradient(to right, #388E3C, #4CAF50);
+  transform: scale(1.05);
+}
 
 /* Navbar */
 .navbar {
@@ -117,14 +221,16 @@ body {
   background-color: #932e5b;
 }
 
-/* Todo List */
 .todo-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adds spacing between items */
   justify-content: center;
   align-items: center;
   background-color: #aa829d;
   padding: 20px;
 }
+
 
 /* Task Counter Badge */
 .task-counter {
@@ -151,7 +257,22 @@ body {
 .todo-form {
   animation: fadeIn 0.5s ease-in-out;
 }
-
-.todo-list {
-  animation: fadeIn 0.7s ease-in-out;
+.todo-priority{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aa829d;
 }
+/* .modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+} */
+

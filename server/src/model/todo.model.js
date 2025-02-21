@@ -9,6 +9,10 @@ const TodoSchema = new mongoose.Schema({
     default: false,
   },
   priority: { type: String, enum: ["high", "medium", "low"], default: "low" },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 //   timestamp: true,
 });
 const Todo=mongoose.model('Todo',TodoSchema);
